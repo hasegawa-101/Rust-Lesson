@@ -59,6 +59,9 @@ pub fn run() {
 
     let array1 = [1, 2, 3, 4, 5];
     let array2 = [0;10]; // 10個の要素を0で初期化
+    let array3 = array2.map(|x| x + 1);
 
     println!("{:?} , {:?}", array2, array1[0]);
+
+    println!("{:?}", array3);
 }
