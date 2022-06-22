@@ -64,4 +64,22 @@ pub fn run() {
     println!("{:?} , {:?}", array2, array1[0]);
 
     println!("{:?}", array3);
+
+    let string1 = "helloこんにちは挨拶"; // byte数は26
+    let string2 = "hello";
+
+    println!("{:p}", &string1);
+    println!("{:p}", &string2);
+    println!("{:p}", &string1.as_ptr());
+    println!("{:p}", &string2.as_ptr());
+    println!("{}", &string1.len());
+    println!("{}", &string2.len());
+    let mut string1 = String::from("hello");
+    let string2 = String::from("helloworld");
+    string1.push_str("world");
+    println!("{}", &string1);
+
+    // strong2から"world"を取り除く
+    let string3 = string2.replace("world", "");
+    println!("{}", &string3);
 }
